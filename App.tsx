@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useCallback } from 'react';
 import { 
   Calendar, 
@@ -717,7 +716,7 @@ export default function App() {
             <p className="font-display font-bold text-slate-900 text-lg">{APP_NAME}</p>
             <p className="text-slate-500 text-sm mt-2">© {new Date().getFullYear()} Diocese of Simla-Chandigarh. All rights reserved.</p>
             <div className="flex space-x-6 mt-6">
-                <a href="#" className="text-slate-400 hover:text-indigo-600 transition-colors">Privacy Policy</a>
+                <a href="/privacy_policy.html" className="text-slate-400 hover:text-indigo-600 transition-colors">Privacy Policy</a>
                 <a href="#" className="text-slate-400 hover:text-indigo-600 transition-colors">Terms of Service</a>
             </div>
          </div>
