@@ -20,9 +20,9 @@ const getLanguageName = (lang: Language): string => {
 };
 
 export const fetchDailyLiturgy = async (date: Date, language: Language): Promise<DailyContent> => {
-  const apiKey = process.env.API_KEY;
+  const apiKey = process.env.NEXT_PUBLIC_API_KEY;
   if (!apiKey) {
-    throw new Error("API Key not found in environment variables");
+    throw new Error("API Key not found in environment variables (NEXT_PUBLIC_API_KEY)");
   }
 
   const ai = new GoogleGenAI({ apiKey });
@@ -133,7 +133,7 @@ export const fetchDailyLiturgy = async (date: Date, language: Language): Promise
 };
 
 export const fetchHymnListByCategory = async (category: string, language: Language): Promise<{title: string, id: string}[]> => {
-    const apiKey = process.env.API_KEY;
+    const apiKey = process.env.NEXT_PUBLIC_API_KEY;
     if (!apiKey) return [];
     
     const ai = new GoogleGenAI({ apiKey });
@@ -167,7 +167,7 @@ export const fetchHymnListByCategory = async (category: string, language: Langua
 }
 
 export const fetchHymnLyrics = async (title: string, language: Language): Promise<{title: string, lyrics: string}> => {
-    const apiKey = process.env.API_KEY;
+    const apiKey = process.env.NEXT_PUBLIC_API_KEY;
     if (!apiKey) return { title, lyrics: "Could not load lyrics." };
     
     const ai = new GoogleGenAI({ apiKey });
