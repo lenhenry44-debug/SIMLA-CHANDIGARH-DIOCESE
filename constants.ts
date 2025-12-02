@@ -1,3 +1,4 @@
+
 export const APP_NAME = "Simla-Chandigarh Diocese";
 
 export const LANGUAGES = [
@@ -9,8 +10,8 @@ export const LANGUAGES = [
 export const START_DATE = new Date('2025-11-30');
 export const END_DATE = new Date('2027-11-28');
 
-// Replace this URL with the actual hosted URL of your Diocese logo
-export const DIOCESE_LOGO_URL = "https://placehold.co/400x400/png?text=Diocese+Logo"; 
+// Using the Diocese of Simla-Chandigarh Coat of Arms
+export const DIOCESE_LOGO_URL = "https://directory.ucanews.com/assets/images/dioceses/2018/11/14/1542187652.jpg"; 
 
 export const SECTIONS = {
   DASHBOARD: 'dashboard',

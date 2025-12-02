@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, useCallback } from 'react';
 import { 
   Calendar, 
@@ -26,20 +27,17 @@ const SplashScreen = ({ onComplete }: { onComplete: () => void }) => {
 
   return (
     <div className="fixed inset-0 z-[100] bg-[#fffcf5] flex flex-col items-center justify-center animate-fade-in">
-      <div className="bg-white p-8 rounded-full mb-8 shadow-2xl animate-bounce-slow border-4 border-indigo-50">
+      <div className="bg-white p-6 rounded-full mb-8 shadow-2xl animate-bounce-slow border-4 border-indigo-50">
         <img 
           src={DIOCESE_LOGO_URL} 
           alt="Diocese Logo" 
-          className="h-40 w-40 object-contain"
+          className="h-48 w-48 object-cover rounded-full"
           onError={(e) => {
             (e.target as HTMLImageElement).style.display = 'none';
           }} 
         />
-        <div className="hidden h-32 w-32 bg-indigo-100 rounded-full items-center justify-center">
-             <Sparkles className="h-16 w-16 text-indigo-500" />
-        </div>
       </div>
-      <h1 className="text-4xl font-display font-bold text-slate-900 tracking-wide mb-3">{APP_NAME}</h1>
+      <h1 className="text-4xl font-display font-bold text-slate-900 tracking-wide mb-3 text-center px-4">{APP_NAME}</h1>
       <p className="text-indigo-800 font-serif italic text-lg">In Caritate Per Verbum Per Mariam</p>
     </div>
   );
@@ -66,7 +64,7 @@ const Navbar = ({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-center md:justify-between h-16 md:h-20">
           <div className="flex items-center space-x-3 cursor-pointer" onClick={() => setSection(SECTIONS.DASHBOARD)}>
-            <img src={DIOCESE_LOGO_URL} alt="Logo" className="h-8 w-8 md:h-10 md:w-10 object-contain" />
+            <img src={DIOCESE_LOGO_URL} alt="Logo" className="h-10 w-10 md:h-12 md:w-12 object-cover rounded-full shadow-sm" />
             <span className="font-display font-bold text-lg md:text-xl text-slate-900 tracking-tight">{APP_NAME}</span>
           </div>
           
@@ -434,7 +432,7 @@ export default function App() {
                  <img 
                     src={DIOCESE_LOGO_URL} 
                     alt="Diocese Logo" 
-                    className="h-32 w-32 md:h-48 md:w-48 object-contain drop-shadow-2xl" 
+                    className="h-32 w-32 md:h-48 md:w-48 object-cover rounded-full drop-shadow-2xl" 
                     onError={(e) => { (e.target as HTMLImageElement).src = 'https://placehold.co/200x200/png?text=Logo'; }}
                  />
               </div>
@@ -715,7 +713,7 @@ export default function App() {
 
       <footer className="bg-white border-t border-slate-200 py-12 mt-auto hidden md:block">
          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
-            <img src={DIOCESE_LOGO_URL} alt="Logo" className="h-12 w-12 object-contain mb-4 grayscale opacity-50" />
+            <img src={DIOCESE_LOGO_URL} alt="Logo" className="h-12 w-12 object-cover rounded-full mb-4 grayscale opacity-50" />
             <p className="font-display font-bold text-slate-900 text-lg">{APP_NAME}</p>
             <p className="text-slate-500 text-sm mt-2">© {new Date().getFullYear()} Diocese of Simla-Chandigarh. All rights reserved.</p>
             <div className="flex space-x-6 mt-6">
